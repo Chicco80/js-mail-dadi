@@ -30,15 +30,25 @@
 
   function tiraDado(){
       
-         let giocatore = Math.floor(Math.random() * 6) +1;
-         let giocatore1= Math.floor(Math.random() * 6) +1;
+         let giocatore1 = Math.floor(Math.random() * 6) +1;
+         let giocatore2= Math.floor(Math.random() * 6) +1;
 
 
-         document.getElementById("ris").innerHTML =`<p>giocatore 1: ${giocatore}</p> <p>giocatore 2: ${giocatore1}</p>`;
+         document.getElementById("ris").innerHTML =`<p>giocatore 1: ${giocatore1}</p> <p>giocatore 2: ${giocatore2}</p>`;
 
-         console.log(giocatore);
-         if(giocatore<giocatore1)
-         document.innerHTML=
+         console.log(giocatore1);
+         if( giocatore1 < giocatore2){
+            
+            ris.innerHTML=(  giocatore2 +" " +"giocatore2 ha vinto")
+      
+
+         }else if( giocatore1 > giocatore2 ){
+            ris.innerHTML=(  giocatore1 +" " +"giocatore1 ha vinto")
+
+
+         }else{
+            ris.innerHTML="pari";
+         }
 
      }
      
